@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Panagiotis Domvros, English and Drama Educator">
+    <title>Lyra and the Headmaster's Ledger</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* This ensures the new splash image is used for this adventure */
+        #splash-screen {
+            background: url('splash.png') no-repeat center center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="splash-screen" class="screen active">
+            <div class="splash-content">
+                <h1>The Headmaster's Ledger</h1>
+                <p>A School Vocabulary Challenge</p>
+                <button id="start-button">Begin a New School Year</button>
+            </div>
+        </div>
+
+        <div id="intro-screen" class="screen">
+            <div class="story-content">
+                <h2>The Legend of the Ledger</h2>
+                <p>Deep within the school's oldest library, legends tell of the Headmaster's Ledger—a book containing not rules, but the secrets to a perfect education. Its wisdom is sealed behind five linguistic trials, each testing a teacher's knowledge of school life.</p>
+                <p>Now, the new school year has begun. As Lyra, a dedicated teacher, you seek the ledger to inspire your students. But you are not alone. Four rival teachers are on your trail, each wanting the ledger for their own reasons. The race is on!</p>
+                <button id="show-characters-button">Meet the Staff</button>
+            </div>
+        </div>
+
+        <div id="character-intro-screen" class="screen">
+            <div class="character-intro-content">
+                <img id="character-intro-portrait" src="" alt="Character Portrait">
+                <div class="character-intro-info">
+                    <h2 id="character-intro-name"></h2>
+                    <p id="character-intro-description"></p>
+                    <button id="next-character-button">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div id="top-bar">
+                <div id="level-title"></div>
+                <div id="progress-bar-container"><div id="progress-bar"></div></div>
+                <div id="score"></div>
+            </div>
+            <div id="main-content">
+                <div id="character-panel">
+                    <img src="lyra_portrait.png" alt="Lyra" id="character-image">
+                    <p id="character-dialogue"></p>
+                </div>
+                <div id="puzzle-panel">
+                    <div id="sentence-container"><p id="sentence-text"></p></div>
+                    <div id="choices-container">
+                        <button class="choice-button"></button>
+                        <button class="choice-button"></button>
+                        <button class="choice-button"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="map-screen" class="screen">
+            <div class="map-content">
+                <h2>The Race for the Ledger</h2>
+                <p id="map-status-text"></p>
+                <ul id="team-progress-list"></ul>
+                <button id="proceed-button">Continue</button>
+            </div>
+        </div>
+        
+        <div id="game-over-screen" class="screen">
+             <div class="game-over-content">
+                <h2 id="game-over-title">The Race is Lost</h2>
+                <img id="winner-portrait" src="" alt="Winner Portrait">
+                <p id="game-over-text"></p>
+                <button id="restart-button">Try Again</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        ✨✍️ Devised by Panagiotis Domvros, English and Drama Teacher, All Rights Reserved ✍️✨
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
